@@ -32,7 +32,7 @@ const Login = () => {
         }
 
         if (usernameError === false && passwordError === false) {
-            window.location.href = 'register-step1';
+            window.location.href = 'register';
         }
     };
 
@@ -73,7 +73,9 @@ const Login = () => {
                                     />
                                 </div>
                                 <div className="login-forgot-password">
-                                    <span className='detail-text'>ลืมรหัสผ่าน</span>
+                                    <span className='detail-text'>
+                                        <a href="#">ลืมรหัสผ่าน</a>
+                                    </span>
                                 </div>
                                 <div className="button-submit-form-login">
                                   <ThemeProvider theme={ButtonTheme}>

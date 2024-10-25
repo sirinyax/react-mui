@@ -20,6 +20,10 @@
         margin-top: 124px;
         margin-bottom: 94px;
     }
+    a {
+        text-decoration: none;
+        color: var(--primary-color-1);
+    }
 
     .login-form {
         max-width: 426px;

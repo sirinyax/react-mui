@@ -13,7 +13,7 @@ const Homepage: React.FC<HomepageProps> = ({}) => {
         window.location.href = 'login';
     };
     const handleRedirectToRegister = () => {
-        window.location.href = 'register-step1';
+        window.location.href = 'register';
       };
 
   return (

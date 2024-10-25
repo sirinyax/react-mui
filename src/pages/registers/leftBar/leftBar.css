@@ -1,0 +1,41 @@
+.left-bar-register {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 15px;
+    background-color: var(--primary-color-3);
+    padding: 0.5rem;
+}
+
+.top-logo-left-bar-register {
+    margin-top: 21px;
+    margin-left: 22px;
+    margin-bottom: 23px;
+}
+
+.group-step-register {
+    margin: 35px 22px;
+
+    .title-step-register {
+        display: flex;
+        align-items: center;
+        line-height: 2.5rem;
+        gap: 20px;
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    .description-step-register {
+        margin-left: 48px;
+    }
+
+    .header-2 {
+        color: var(--primary-color-5);
+    }
+
+    .active-step, .detail-text-active {
+        color: #000 !important;
+    }
+}
