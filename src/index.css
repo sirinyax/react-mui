@@ -69,3 +69,69 @@
   margin: 0;
   font-family: 'IBMFontRegular', sans-serif;
 }
+
+.header-1 {
+  color: #000;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header-2 {
+  color: #000;
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.header-3 {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.secondary-text {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.detail-text {
+  color: var(--suporrting-color-1);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.detail-secondary-text {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.selected-text {
+  color: var(--select-option-color);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

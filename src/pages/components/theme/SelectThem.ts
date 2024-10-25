@@ -23,7 +23,7 @@ const SelectTheme: Theme = createTheme({
                     backgroundColor: '#fff',
                     border: 'none',
                     borderRadius: '8px',
-                    padding: '18px 10px 16px 10px',
+                    padding: '15px 10px 10px 10px',
                     '&:hover fieldset': {
                         border: '1px solid #ccc !important',
                     },

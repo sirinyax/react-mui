@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FC, InputHTMLAttributes, useState } from 'react';
-import './inputtext.css'
+import './inputText.css'
 
 interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

@@ -26,6 +26,7 @@ const ButtonTheme: Theme = createTheme({
         contained: {
           backgroundColor: mainColor,
           color: '#fff',
+          boxShadow: 'none !important',
           '&:hover': {
             backgroundColor: hoverColor,
           },

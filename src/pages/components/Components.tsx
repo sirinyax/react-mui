@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import './components.css';
 import { ThemeProvider } from '@mui/material/styles';
-import { Button, InputAdornment, MenuItem, Select, SelectChangeEvent, TextField } from '@mui/material';
+import { Button, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import ButtonTheme from './theme/ฺButtonTheme';
 import SelectTheme from './theme/SelectThem';
 import { ExpandMoreOutlined, EastOutlined, AccountCircle } from '@mui/icons-material';
-import InputText from './input/inputtext/inputText';
+import InputText from './inputcomponent/InputText/inputText';
+import InputPassword from './inputcomponent/inputPassword/inputPassword';
 
 const Components = () => {
     // Input text
     const [txt, setTxt] = useState<string>('');
     const [errorTxt, setErrorTxt] = useState<string>('');
+
+    // Input password
+    const [password, setPassword] = useState<string>('');
 
     // Select Dropdown
     const [number, setNumber] = useState<string>('');
@@ -83,7 +87,7 @@ const Components = () => {
                         inputProps={{ 'aria-label': 'Without label' }}
                         sx={{
                             width: '426px',
-                            height: '48px',
+                            height: '40px',
                         }}
                         IconComponent={ExpandMoreOutlined}
                     >
@@ -96,14 +100,22 @@ const Components = () => {
             </div>
             <div className="m-2">
                 <h5>Input</h5>
-                <h4>Input text</h4>
-                    <InputText
-                        label="Text"
-                        value={txt}
-                        onValueChange={setTxt}
-                        errorMessage={errorTxt}
-                        placeholder="Please input something..."
-                    />
+                <InputText 
+                    label='Text' 
+                    width='352px' 
+                    height='40px'
+                    placeholder='Please type something here....' 
+                    value={txt}
+                    onValueChange={setTxt}
+                />
+                <InputPassword 
+                    label='Password' 
+                    width='352px'
+                    height='40px'
+                    placeholder='Please type password.'
+                    value={password}
+                    onPasswordChange={setPassword} 
+                />
             </div>
 
         </div>
