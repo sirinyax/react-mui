@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'IBMFontBold';
+  src: url('./assets//fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-Bold.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'IBMFontExtraLight';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMFontLight';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMFontMedium';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMFontRegular';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMFontSemiBold';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBMFontThin';
+  src: url('./assets/fonts/IBM_Plex_Sans_Thai/IBMPlexSansThai-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoRegular';
+  src: url('./assets/fonts/Noto_Sans/static/NotoSans-Regular.ttf') format('truetype');
+}
+
+:root {
+  /* Primary color */
+  --primary-color-1: #12CB84;
+  --primary-color-2: #94E0C3;
+  --primary-color-3: #F5FBFF;
+  --primary-color-4: #1C1C1C;
+  --primary-color-5: #818181;
+
+  /* Supporting color */
+  --suporrting-color-1: #939393;
+  --supporting-color-2: #CCCCCC;
+  --supporting-color-3: #F8FFFC;
+  --supporting-color-4: #11DE8F;
+  --supporting-color-5: #F9FAFC;
+  --supporting-color-6: #F4F4F4;
+  --supporting-color-7: #1E1E1E;
+
+  /* Font color */
+  --paragraph-color: #A8A8A8;
+  --select-option-color: #1C1C1C
+
+  /* Font */
+  --font-ibm-regular: 'IBMFontRegular', sans-serif;
+  --font-noto-regular: 'NotoRegular', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'IBMFontRegular', sans-serif;
 }

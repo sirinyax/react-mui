@@ -1,0 +1,47 @@
+.label-input-text {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--select-option-color);
+}
+
+.label-input-text-error {
+    font-family: var(--font-family);
+    font-size: 16px;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: red !important;
+}
+
+.input-text-field {
+    font-family: var(--font-noto-regular);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+}
+
+.input-text-field-error {
+    font-family: var(--font-noto-regular);
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+}
+
+.error-message-text{
+    color: red !important;
+    margin: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .input-text-field {
+        width: 100%;
+    }
+
+    .input-text-field-error {
+        width: 100%;
+    }
+
+}

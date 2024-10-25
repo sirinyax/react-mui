@@ -1,0 +1,12 @@
+.icon-in-button {
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#register-button:hover {
+    .icon-in-button {
+        display: block;
+        opacity: 1;
+    }
+}
