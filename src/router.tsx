@@ -7,6 +7,8 @@ import RegisterStep1 from "./pages/registers/step1/RegisterStep1";
 import RegisterStep2 from "./pages/registers/step2/RegisterStep2";
 import RegisterStep3 from "./pages/registers/step3/RegisterStep3";
 import RegisterStep4 from "./pages/registers/step4/RegisterStep4";
+import OrgStructureForm from "./pages/advisor/examplegenerateorganize/Organization";
+import Chart from "./pages/advisor/examplegenerateorganize/Chart";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
     {
         path: 'register/step4',
         element: <RegisterStep4 />
+    },
+    {
+        path: 'organization',
+        element: <OrgStructureForm />
+    },
+    {
+        path: 'chart',
+        element: <Chart />
     }
 ]);
 
