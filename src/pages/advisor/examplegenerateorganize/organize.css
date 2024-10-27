@@ -1,0 +1,70 @@
+*{
+    font-family:  'IBMFontRegular', sans-serif;
+}
+
+.row-for-form-input {
+    padding: 1rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr fit-content(100%);
+    gap: 10px;
+    align-items: center;
+}
+
+.card {
+    padding: 15px;
+    height: auto;
+    width: 100%;
+    /* max-width: 80%; */
+
+    input {
+        /* border: 1px solid #000; */
+        align-self: center;
+        font-size: 16px;
+        padding: 0px;
+        color: var(--supporting-color-1);
+    }
+
+    /* .card-content-org {
+        background-color: green;
+    } */
+
+    .department-org {
+        /* background-color: yellow; */
+        width: fit-content;
+        display: flex;
+        gap: 10px;
+    }
+
+    .team-org {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 1.5rem;
+
+        .team-org-content {
+            display: flex;
+            gap: 5px;
+            width: fit-content;
+        }
+    }
+
+    .role-org {
+        /* background-color: blue; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+
+    .input-dept-org, .input-team-org, .input-role-org {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--supporting-color-2);
+        border-radius: 8px;
+        padding: 10px;
+        height: 40px;
+        gap: 10px;
+
+        
+    }
+}
