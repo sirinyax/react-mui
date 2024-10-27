@@ -17,7 +17,7 @@ export interface Role {
   }
   
   export interface Organization {
-    name: string;
+    company_name: string;
     departments: Department[];
   }
   

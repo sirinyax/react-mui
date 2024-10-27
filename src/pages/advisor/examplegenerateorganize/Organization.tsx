@@ -8,11 +8,11 @@ import { ExpandMoreOutlined } from '@mui/icons-material';
 import './organize.css';
 import InputText from '../../components/inputcomponent/InputText/inputText';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faX, faPlus } from '@fortawesome/free-solid-svg-icons'; 
+import { faX, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons'; 
 
 const OrgStructureForm: React.FC = () => {
     const company_name = "4.0";
-    const [orgName, setOrgName] = useState<string>(company_name);
+    const [orgName, setOrgName] = useState<string>('');
     const [selectedValue, setSelectedValue] = useState<string>('');
     const [departments, setDepartments] = useState<Department[]>([]);
 
@@ -79,16 +79,22 @@ const OrgStructureForm: React.FC = () => {
         ));
     };
 
-    // Gen โครงสร้าง
+    //กดดู preview
+    const handlePreviewOrganize = () => {
+        console.log("Preview organize");
+    }
+
+    //กดบันทึกข้อมูลลง DB
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         const organization: Organization = {
-            name: orgName,
+            company_name: orgName,
             departments,
         };
         console.log('Generated Organization Structure:', organization);
     };
 
+    //check ข้อมูลที่ input
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement>,
         deptId?: number,
@@ -136,8 +142,8 @@ const OrgStructureForm: React.FC = () => {
             <form onSubmit={handleSubmit}>
                 <div className='row m-0 p-1'>
                     <div className="col-12">
-                        <span className='header-1'>ชื่อบริษัท: {orgName}</span>
-                        {/* <input type="text" value={orgName} onChange={(e) => handleInputChange(e)} /> */}
+                        <span className='header-1'>ชื่อบริษัท: </span>
+                        <input type="text" value={orgName} onChange={(e) => handleInputChange(e)} />
                     </div>
                 </div>
                 <div className="row m-0 p-1">
@@ -161,43 +167,7 @@ const OrgStructureForm: React.FC = () => {
                         </ThemeProvider>
                     </div>
                 </div>
-                <div className="row m-0 p-1">
-                    <div className="col-12">
-                        {
-                            selectedValue === "แผนก" && (
-                                <div>
-                                    <ThemeProvider theme={ButtonTheme}>
-                                        <Button
-                                            variant="contained"
-                                            sx={{ width: '426px', height: '40px' }}
-                                            onClick={handleAddDepartment}
-                                        >
-                                            เพิ่มแผนก
-                                        </Button>
-                                    </ThemeProvider>
-                                </div>
-                            )
-                        }
-                        {
-                            selectedValue === "สาขา" && (
-                                <div>
-                                    <ThemeProvider theme={ButtonTheme}>
-                                        <Button
-                                            variant="contained"
-                                            sx={{ width: '426px', height: '40px' }}
-                                            onClick={handleAddDepartment}
-                                        >
-                                            เพิ่มสาขา
-                                        </Button>
-                                    </ThemeProvider>
-                                </div>
-                            )
-                        }
-                        
-                        
-                        
-                    </div>
-                </div>
+                
                 {departments.map(dept => (
                     <div key={dept.id} className="row-for-form-input">
                         <div className="card">
@@ -251,7 +221,17 @@ const OrgStructureForm: React.FC = () => {
                                         <div className="child-dept-content">
                                             {dept.teams.map(team => (
                                                 <div key={team.id} className='team-org'>
-                                                    <span className="header-2">แผนก</span>
+                                                    {
+                                                        selectedValue === 'สาขา' && (
+                                                            <span className="header-2">แผนก</span>
+                                                        )
+                                                    }
+                                                    {
+                                                        selectedValue === 'แผนก' && (
+                                                            <span className="header-2">สาขา</span>
+                                                        )
+                                                    }
+                                                    
 
                                                     <div className='team-org-content'>
                                                         <div className='input-team-org'>
@@ -334,7 +314,16 @@ const OrgStructureForm: React.FC = () => {
                         </div>
                         <div className="button-delete-org">
                                     <div className="row m-0">
-                                        <ThemeProvider theme={ButtonTheme}>
+                                        <FontAwesomeIcon
+                                            icon={faTrash}
+                                            style={{
+                                                color: "red",
+                                                cursor: 'pointer',
+                                                fontSize: '24px',
+                                            }}
+                                            onClick={() => handleDeleteDepartment(dept.id)}
+                                        />
+                                        {/* <ThemeProvider theme={ButtonTheme}>
                                             <Button
                                                 variant="outlined"
                                                 sx={{ width: 'fit-content', height: 'auto', padding: '5px 10px' }}
@@ -342,21 +331,82 @@ const OrgStructureForm: React.FC = () => {
                                             >
                                                 ลบ{selectedValue}
                                             </Button>
-                                        </ThemeProvider>
+                                        </ThemeProvider> */}
                                     </div>
                                 </div>
                     </div>
                     
                 ))}
+                <div className="row m-0 p-1">
+                    <div className="col-12">
+                        {
+                            selectedValue === "แผนก" && (
+                                <div>
+                                    <ThemeProvider theme={ButtonTheme}>
+                                        <Button
+                                            variant="outlined"
+                                            sx={{ 
+                                                width: '426px', 
+                                                height: '40px' 
+                                            }}
+                                            onClick={handleAddDepartment}
+                                        >
+                                            เพิ่มแผนก
+                                        </Button>
+                                    </ThemeProvider>
+                                </div>
+                            )
+                        }
+                        {
+                            selectedValue === "สาขา" && (
+                                <div>
+                                    <ThemeProvider theme={ButtonTheme}>
+                                        <Button
+                                            variant="outlined"
+                                            sx={{ 
+                                                width: '426px', 
+                                                height: '40px' 
+                                            }}
+                                            onClick={handleAddDepartment}
+                                        >
+                                            เพิ่มสาขา
+                                        </Button>
+                                    </ThemeProvider>
+                                </div>
+                            )
+                        }
+                    </div>
+                </div>
                 <div className="row m-0 p-0">
                     <div className="col-12 mt-3 mb-3">
                         <ThemeProvider theme={ButtonTheme}>
                             <Button
                                 variant="outlined"
-                                sx={{ width: 'fit-content', height: 'auto', padding: '5px 10px' }}
+                                sx={{
+                                    padding: '5px 10px',
+                                    width: '426px',
+                                    height: '40px'
+                                }}
+                                onClick={handlePreviewOrganize}
+                            >
+                                ดูตัวอย่าง
+                            </Button>
+                        </ThemeProvider>
+                    </div>
+                </div>
+                <div className="row m-0 p-0">
+                    <div className="col-12 mt-3 mb-3">
+                        <ThemeProvider theme={ButtonTheme}>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    padding: '5px 10px',
+                                    width: '426px', 
+                                    height: '40px'
+                                }}
                                 type='submit'
                             >
-                                Generate!
+                                บันทึก
                             </Button>
                         </ThemeProvider>
                     </div>
