@@ -188,7 +188,6 @@ const OrgStructureForm: React.FC = () => {
                                                             value={dept.name}
                                                             onChange={(e) => handleInputChange(e, dept.id)}
                                                         />
-
                                                     </div>
                                                     <FontAwesomeIcon
                                                         icon={faPlus}
@@ -204,17 +203,7 @@ const OrgStructureForm: React.FC = () => {
                                                         onClick={() => handleAddTeam(dept.id)}
                                                     />
                                                 </div>
-                                                
-                                            {/* <div>
-                                                { selectedValue === 'สาขา' && (
-                                                    <button type="button" onClick={() => handleAddTeam(dept.id)}>เพิ่มแผนก</button>
-                                                )}
-                                                { selectedValue === 'แผนก' && (
-                                                    <button type="button" onClick={() => handleAddTeam(dept.id)}>เพิ่มสาขา</button>
-                                                )}
-                                            </div> */}  
                                             </div>
-                                            
                                         </div>
 
                                         {/* Level 2 */}
@@ -231,8 +220,6 @@ const OrgStructureForm: React.FC = () => {
                                                             <span className="header-2">สาขา</span>
                                                         )
                                                     }
-                                                    
-
                                                     <div className='team-org-content'>
                                                         <div className='input-team-org'>
                                                             <input
@@ -264,12 +251,6 @@ const OrgStructureForm: React.FC = () => {
                                                             }}
                                                             onClick={() => handleAddRole(dept.id, team.id)}
                                                         />
-                                                            {/* <button 
-                                                                type="button" 
-                                                                onClick={() => handleAddRole(dept.id, team.id)}
-                                                            >
-                                                                เพิ่มตำแหน่ง
-                                                            </button> */}
                                                         </div>
                                                     </div>
 
@@ -313,27 +294,18 @@ const OrgStructureForm: React.FC = () => {
 
                         </div>
                         <div className="button-delete-org">
-                                    <div className="row m-0">
-                                        <FontAwesomeIcon
-                                            icon={faTrash}
-                                            style={{
-                                                color: "red",
-                                                cursor: 'pointer',
-                                                fontSize: '24px',
-                                            }}
-                                            onClick={() => handleDeleteDepartment(dept.id)}
-                                        />
-                                        {/* <ThemeProvider theme={ButtonTheme}>
-                                            <Button
-                                                variant="outlined"
-                                                sx={{ width: 'fit-content', height: 'auto', padding: '5px 10px' }}
-                                                onClick={() => handleDeleteDepartment(dept.id)}
-                                            >
-                                                ลบ{selectedValue}
-                                            </Button>
-                                        </ThemeProvider> */}
-                                    </div>
-                                </div>
+                            <div className="row m-0">
+                                <FontAwesomeIcon
+                                    icon={faTrash}
+                                    style={{
+                                        color: "red",
+                                        cursor: 'pointer',
+                                        fontSize: '24px',
+                                    }}
+                                    onClick={() => handleDeleteDepartment(dept.id)}
+                                />
+                            </div>
+                        </div>
                     </div>
                     
                 ))}
@@ -413,7 +385,6 @@ const OrgStructureForm: React.FC = () => {
                 </div>
             </form>
         </div>
-
     );
 };
 

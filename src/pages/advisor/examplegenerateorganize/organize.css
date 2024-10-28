@@ -14,7 +14,7 @@
 .card {
     padding: 15px;
     height: auto;
-    width: 100%;
+    width: fit-content;
     /* max-width: 80%; */
 
     input {
@@ -33,6 +33,7 @@
         /* background-color: yellow; */
         width: fit-content;
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
