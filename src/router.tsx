@@ -9,6 +9,9 @@ import RegisterStep3 from "./pages/registers/step3/RegisterStep3";
 import RegisterStep4 from "./pages/registers/step4/RegisterStep4";
 import OrgStructureForm from "./pages/advisor/examplegenerateorganize/Organization";
 import Chart from "./pages/advisor/examplegenerateorganize/Chart";
+import CompanyList from "./pages/advisor/companyList/CompanyList";
+import Mainpage from "./pages/advisor/mainpage/Mainpage";
+import Usage from "./pages/advisor/usage/Usage";
 
 const router = createBrowserRouter([
     {
@@ -26,20 +29,6 @@ const router = createBrowserRouter([
     {
         path: 'register',
         element: <RegisterStep1 />,
-        // children: [
-        //     {
-        //         path: 'step2',
-        //         element: <RegisterStep2 />
-        //     },
-        //     {
-        //         path: 'step3',
-        //         element: <RegisterStep3 />
-        //     },
-        //     {
-        //         path: 'step4',
-        //         element: <RegisterStep4 />
-        //     }
-        // ]
     },
     {
         path: 'register/step2',
@@ -60,6 +49,15 @@ const router = createBrowserRouter([
     {
         path: 'chart',
         element: <Chart />
+    },
+    {
+        path: 'advisor',
+        element: <Mainpage />,
+    },
+    {
+        path: 'company-list',
+        element: <CompanyList />
+        
     }
 ]);
 

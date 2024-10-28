@@ -1,0 +1,18 @@
+.main-page {
+    display: block;
+    padding: 1.5rem;
+}
+
+.card-manage-profile{
+    width: 100%;
+    max-width: 344px;
+    height: 344px;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color-1);
+    background: #FFF;
+
+    .card-content {
+        align-items: start;
+    }
+}
