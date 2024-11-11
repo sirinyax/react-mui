@@ -12,6 +12,8 @@ import Chart from "./pages/advisor/examplegenerateorganize/Chart";
 import CompanyList from "./pages/advisor/companyList/CompanyList";
 import Mainpage from "./pages/advisor/mainpage/Mainpage";
 import Usage from "./pages/advisor/usage/Usage";
+import ExportFile from "./pages/exportDoc/ExportFile";
+import TemplateForm from "./pages/exportDoc/export";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +60,9 @@ const router = createBrowserRouter([
         path: 'company-list',
         element: <CompanyList />
         
+    }, {
+        path: 'preview',
+        element: <TemplateForm />
     }
 ]);
 
